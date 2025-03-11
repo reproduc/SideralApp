@@ -78,11 +78,31 @@
                         <li>
                             <a href="https://www.facebook.com/SIDERALSTEREO" target="_blank"><img src="img/facebook.png" alt="facebook" width="48" height="48"></a>
                             <a href="https://sideral.radiosideralcaraz.com" target="_blank"><img src="img/instagram.png" alt="instagram" width="48" height="48"></a>
-
-
-                               <a href="https://sideral.radiosideralcaraz.com" target="_blank"><img src="img/tiktok.png" alt="instagram" width="48" height="48"></a>
-                               
+                            <a href="https://sideral.radiosideralcaraz.com" target="_blank"><img src="img/tiktok.png" alt="instagram" width="48" height="48"></a>
                             <a href="https://wa.me/51972822799" target="_blank"><img src="img/whatsapp.png" alt="whatsapp" width="48" height="48"></a>
+			    <button id="button"><img src="img/compartir.png" alt="compartir" width="48" height="48"></button>
+				</main>
+  <script>
+    const $button = document.querySelector('#button')
+    if ('share' in navigator) {
+      $button.addEventListener('click', share)
+      function share() {
+        navigator.share({
+          title: 'Probando Share API',
+          text: 'Compartimos Nuestra Aplicación',
+          url: 'https://reproduc.github.io/SideralApp/',
+        })
+        .then(()=>{
+          alert('hemos logrado compartir')
+        })
+        .catch(()=>{
+          alert('no se pudo compartir, prueba usando https en un navegador móvil')
+        })
+      }
+    } else {
+      alert('No está disponible el API de web share')
+    }
+  </script>
                             </li>
                         <p>Radio Sideral - Atrazando a Todas</p>
                     </ul>
