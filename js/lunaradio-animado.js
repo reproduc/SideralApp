@@ -178,7 +178,7 @@ d("#" + c + "containerinside").css({
     top: "0px",
     height: "100%",
     width: "100%",
-    background: 'url("img/video.mp4") no-repeat center center',
+    background: 'url("img/fondo.jpg") no-repeat center center',
     "background-size": "cover"
 });
 Ua = "true" == vb && "" != Ca ? Ca +
@@ -2972,6 +2972,7 @@ G(this, "mousedown", "mousedown")
 }
 
 })(jQuery);
+
 
 
 
